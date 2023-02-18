@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:"http://www.thymeleaf.org" th:replace="base::layout(~{::section})" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Profile</title>
+</head>
+<body>
+<!--</section>-->
+<section>
+
+    <div class="container text-center">
+        <div class="card">
+            <div class="card-body">
+                <div class="container text-center">
+
+                    <h3 class="mt-2">
+                        <span th:text="${user.firstName}"></span>
+                    </h3>
+
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col">#USERID : </th>
+                            <th scope="col"><span th:text="${user.id}"></span></th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        <tr>
+                            <th scope="row">LAST NAME : </th>
+                            <td><span th:text="${user.firstName}"></span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">LAST NAME :  </th>
+                            <td><span th:text="${user.lastName}"></span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">EMAIL : </th>
+                            <td><span th:text="${user.email}"></span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">ROLE : </th>
+                            <td><span th:text="${user.role}"></span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">ACTIVATE : </th>
+                            <td><span th:text="${user.enabled}"></span></td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

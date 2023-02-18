@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:"http://www.thymeleaf.org" th:replace="base::layout(~{::section})" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<section>
+    <div class="container text-center m-5">
+  <h2>Send OTP API</h2>
+  <form th:action="@{/api/otp/send}" method="post">
+    <label for="email"><b>Email:</b></label>
+    <input type="email" id="email" name="email" required>
+    <button type="submit">Send OTP</button>
+  </form>
+    </div>
+</section>
+
+
+</body>
+</html>

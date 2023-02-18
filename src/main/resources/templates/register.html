@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:"http://www.thymeleaf.org" th:replace="base::layout(~{::section})" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Register page</h1>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="my-card mt-2">
+
+<!--                    <div th:if="${session.message}"-->
+<!--                         th:classappend="${session.message.type}"-->
+<!--                         class="alert alert-primary" role="alert">-->
+<!--                        <p class="text-center" th:text="${session.message.content}"></p>-->
+<!--                        <th:blcok th:text="${#session.removeAttribute('message')}">-->
+<!--                        </th:blcok>-->
+<!--                    </div>-->
+
+                    <h1 class="text-center">Register Here!!</h1>
+                    <form action="" th:action="@{/api/user/register}" method="post">
+                        <!-- first name field -->
+                        <div class="form-group">
+                            <label for="firstName_field">Your Firstname</label>
+                            <input type="text" name="firstName" class="form-control" id="firstName_field"
+                                   aria-describedby="namelHelp"
+                                   placeholder="Enter here" required>
+                        </div>
+                        <!-- last name field -->
+                        <div class="form-group">
+                            <label for="lastName_field">Your Lastname</label>
+                            <input type="text" name="lastName" class="form-control" id="lastName_field"
+                                   aria-describedby="namelHelp"
+                                   placeholder="Enter here" required>
+                        </div>
+
+                        <!-- email field -->
+                        <div class="form-group">
+                            <label for="email_field">Email address</label> <input
+                                type="email" name="email" class="form-control" id="email_field"
+                                aria-describedby="emailHelp"
+                                th:value="${#session.getAttribute('email')}"
+                                placeholder="Enter email here" contenteditable="false" required>
+                        </div>
+
+                        <!-- password field -->
+                        <div class="form-group">
+                            <label for="password_field">Your Password</label> <input
+                                type="password" name="password" class="form-control"
+                                id="password_field" aria-describedby="passowordlHelp"
+                                placeholder="Enter here" required>
+                        </div>
+
+                        <!-- condition field -->
+                        <div class="form-group form-check text-center">
+                            <input type="checkbox" name="agreement" class="form-check-input"
+                                   id="agreement"> <label class="form-check-label"
+                                                          for="agreement">Accept terms and conditions</label>
+                        </div>
+
+                        <div class="container text-center">
+                            <button type="submit" class="btn bg-primary ">Submit</button>
+
+                            <button type="reset" class="btn btn-warning ">Reset</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
