@@ -2,7 +2,7 @@
 Springboot MVC Web Application
 
 # Introduction
-his is a Java Spring Boot MVC application that uses a MySQL database and several Spring libraries, 
+This is a Java Spring Boot MVC application that uses a MySQL database and several Spring libraries, 
 including Spring Boot, Spring Data JPA, Lombok, and Spring Security. The application includes 
 three REST APIs that can be accessed through a Thymeleaf template engine-based HTML page. 
 The three APIs are used to send an OTP, validate an OTP, and manage user profiles.
