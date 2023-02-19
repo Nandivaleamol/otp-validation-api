@@ -8,7 +8,7 @@ three REST APIs that can be accessed through a Thymeleaf template engine-based H
 The three APIs are used to send an OTP, validate an OTP, and manage user profiles.
 
 # Technologies
-1. ava - Programming language used for the application
+1. Java - Programming language used for the application
 2. Spring Boot - Framework used for building the application
 3. Spring Data JPA - Library used for database access
 4. MySQL - Database used for storing application data
@@ -22,7 +22,7 @@ The three APIs are used to send an OTP, validate an OTP, and manage user profile
 
 2. Create the MySQL database and configure the application to connect to it.
 
-3. Create the User entity with the necessary fields, including name, email, password, and OTP.
+3. Create the User entity with the necessary fields, including firstName, lastName, email, password.
 
 4. Use Lombok annotations to generate getters, setters, constructors, and other boilerplate code.
 
@@ -32,14 +32,15 @@ The three APIs are used to send an OTP, validate an OTP, and manage user profile
 
 7. Implement the User Service with the functionality to create, read, update, and delete user profiles.
 
-8. Create the three REST APIs using Spring Boot annotations. The APIs include:
+8. Create the three REST APIs using Spring Boot annotations. 
+   The APIs include:
   a. An OTP send API that sends an OTP to the user's email.
   b. An OTP validate API that validates the OTP entered by the user.
   c. A user profile API that allows users to create, read, update, and delete their profiles.
 
-9. Use Spring Security to secure the APIs and the HTML page with JWT token.
+9. Use Spring Security to secure the APIs.
 
-10. Use Thymeleaf to create an HTML page that allows users to interact with the three REST APIs.
+10. Use Thymeleaf to create an HTML page that allows users to interact with the three APIs.
 
 # Conclusion
 This Java Spring Boot MVC application with a MySQL database, Spring Boot, Spring Data JPA, Lombok, Spring Security, 
